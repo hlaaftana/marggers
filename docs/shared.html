@@ -160,6 +160,13 @@ function main() {
     title="paragraphIfText(elem: MarggersElement): MarggersElement">paragraphIfText,<wbr>MarggersElement</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">peekPrevMatch
+      <li><a class="reference" href="#peekPrevMatch%2CMarggersParser%2C%2Cint"
+    title="peekPrevMatch(parser: MarggersParser; pat: char | set[char]; offset: int = 0): bool">peekPrevMatch,<wbr>MarggersParser,<wbr>,<wbr>int</a></li>
+  <li><a class="reference" href="#peekPrevMatch%2CMarggersParser%2Cstring%2Cint"
+    title="peekPrevMatch(parser: MarggersParser; pat: string; offset: int = 0): bool">peekPrevMatch,<wbr>MarggersParser,<wbr>string,<wbr>int</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">newElem
       <li><a class="reference" href="#newElem%2CKnownTags%2Cseq%5BMarggersElement%5D"
     title="newElem(tag: KnownTags; content: seq[MarggersElement] = @[]): MarggersElement">newElem,<wbr>KnownTags,<wbr>seq[MarggersElement]</a></li>
@@ -170,17 +177,27 @@ function main() {
     title="isEmpty(tag: KnownTags): bool">isEmpty,<wbr>KnownTags</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">anyPrev
+      <li><a class="reference" href="#anyPrev%2CMarggersParser%2Cint"
+    title="anyPrev(parser: MarggersParser; offset: int = 0): bool">anyPrev,<wbr>MarggersParser,<wbr>int</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">peekMatch
       <li><a class="reference" href="#peekMatch%2CMarggersParser%2Cchar%2Cint"
     title="peekMatch(parser: MarggersParser; pat: char; offset: int = 0): bool">peekMatch,<wbr>MarggersParser,<wbr>char,<wbr>int</a></li>
   <li><a class="reference" href="#peekMatch%2CMarggersParser%2Cset%5Bchar%5D%2Cint"
     title="peekMatch(parser: MarggersParser; pat: set[char]; offset: int = 0): bool">peekMatch,<wbr>MarggersParser,<wbr>set[char],<wbr>int</a></li>
-  <li><a class="reference" href="#peekMatch%2CMarggersParser%2Cchar%2Cint%2Cint"
-    title="peekMatch(parser: MarggersParser; pat: char; offset: int = 0; len: int): bool">peekMatch,<wbr>MarggersParser,<wbr>char,<wbr>int,<wbr>int</a></li>
-  <li><a class="reference" href="#peekMatch%2CMarggersParser%2Cset%5Bchar%5D%2Cint%2Cint"
-    title="peekMatch(parser: MarggersParser; pat: set[char]; offset: int = 0; len: int): bool">peekMatch,<wbr>MarggersParser,<wbr>set[char],<wbr>int,<wbr>int</a></li>
+  <li><a class="reference" href="#peekMatch%2CMarggersParser%2Cchar%2Cint%2CNatural"
+    title="peekMatch(parser: MarggersParser; pat: char; offset: int = 0; len: Natural): bool">peekMatch,<wbr>MarggersParser,<wbr>char,<wbr>int,<wbr>Natural</a></li>
+  <li><a class="reference" href="#peekMatch%2CMarggersParser%2Cset%5Bchar%5D%2Cint%2CNatural"
+    title="peekMatch(parser: MarggersParser; pat: set[char]; offset: int = 0; len: Natural): bool">peekMatch,<wbr>MarggersParser,<wbr>set[char],<wbr>int,<wbr>Natural</a></li>
   <li><a class="reference" href="#peekMatch%2CMarggersParser%2Cstring%2Cint"
     title="peekMatch(parser: MarggersParser; pat: string; offset: int = 0): bool">peekMatch,<wbr>MarggersParser,<wbr>string,<wbr>int</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">anyNext
+      <li><a class="reference" href="#anyNext%2CMarggersParser%2Cint"
+    title="anyNext(parser: MarggersParser; offset: int = 0): bool">anyNext,<wbr>MarggersParser,<wbr>int</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">nextMatch
@@ -244,6 +261,10 @@ function main() {
     title="get(parser: MarggersParser; offset: int = 0): char">get</a></li>
   <li><a class="reference" href="#get.t%2CMarggersParser%2Cint%2Cint"
     title="get(parser: MarggersParser; offset: int = 0; len: int): NativeString">get</a></li>
+  <li><a class="reference" href="#noNext.t%2CMarggersParser%2Cint"
+    title="noNext(parser: MarggersParser; offset: int = 0): bool">noNext</a></li>
+  <li><a class="reference" href="#noPrev.t%2CMarggersParser%2Cint"
+    title="noPrev(parser: MarggersParser; offset: int = 0): bool">noPrev</a></li>
   <li><a class="reference" href="#nextMatch.t%2CMarggersParserVar"
     title="nextMatch(parser: MarggersParserVar): MarggersParserVarMatcher">nextMatch</a></li>
   <li><a class="reference" href="#case.t%2CMarggersParserVarMatcher"
@@ -352,9 +373,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L246"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L264"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L246" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L264" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 
@@ -451,9 +472,9 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L121" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<a id="peekMatch,MarggersParser,char,int"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#peekMatch%2CMarggersParser%2Cchar%2Cint"><span class="Identifier">peekMatch</span></a><span class="Other">(</span><span class="Identifier">parser</span><span class="Other">:</span> <a href="shared.html#MarggersParser"><span class="Identifier">MarggersParser</span></a><span class="Other">;</span> <span class="Identifier">pat</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">;</span> <span class="Identifier">offset</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<a id="anyNext,MarggersParser,int"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#anyNext%2CMarggersParser%2Cint"><span class="Identifier">anyNext</span></a><span class="Other">(</span><span class="Identifier">parser</span><span class="Other">:</span> <a href="shared.html#MarggersParser"><span class="Identifier">MarggersParser</span></a><span class="Other">;</span> <span class="Identifier">offset</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span>
+    <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 
@@ -463,9 +484,9 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L184" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<a id="peekMatch,MarggersParser,set[char],int"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#peekMatch%2CMarggersParser%2Cset%5Bchar%5D%2Cint"><span class="Identifier">peekMatch</span></a><span class="Other">(</span><span class="Identifier">parser</span><span class="Other">:</span> <a href="shared.html#MarggersParser"><span class="Identifier">MarggersParser</span></a><span class="Other">;</span> <span class="Identifier">pat</span><span class="Other">:</span> <span class="Identifier">set</span><span class="Other">[</span><span class="Identifier">char</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">offset</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<a id="anyPrev,MarggersParser,int"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#anyPrev%2CMarggersParser%2Cint"><span class="Identifier">anyPrev</span></a><span class="Other">(</span><span class="Identifier">parser</span><span class="Other">:</span> <a href="shared.html#MarggersParser"><span class="Identifier">MarggersParser</span></a><span class="Other">;</span> <span class="Identifier">offset</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span>
+    <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 
@@ -475,20 +496,20 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L187" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<a id="peekMatch,MarggersParser,char,int,int"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#peekMatch%2CMarggersParser%2Cchar%2Cint%2Cint"><span class="Identifier">peekMatch</span></a><span class="Other">(</span><span class="Identifier">parser</span><span class="Other">:</span> <a href="shared.html#MarggersParser"><span class="Identifier">MarggersParser</span></a><span class="Other">;</span> <span class="Identifier">pat</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">;</span> <span class="Identifier">offset</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">;</span> <span class="Identifier">len</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+<a id="peekMatch,MarggersParser,char,int"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#peekMatch%2CMarggersParser%2Cchar%2Cint"><span class="Identifier">peekMatch</span></a><span class="Other">(</span><span class="Identifier">parser</span><span class="Other">:</span> <a href="shared.html#MarggersParser"><span class="Identifier">MarggersParser</span></a><span class="Other">;</span> <span class="Identifier">pat</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">;</span> <span class="Identifier">offset</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
     <span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L190"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L196"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L190" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L196" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<a id="peekMatch,MarggersParser,set[char],int,int"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#peekMatch%2CMarggersParser%2Cset%5Bchar%5D%2Cint%2Cint"><span class="Identifier">peekMatch</span></a><span class="Other">(</span><span class="Identifier">parser</span><span class="Other">:</span> <a href="shared.html#MarggersParser"><span class="Identifier">MarggersParser</span></a><span class="Other">;</span> <span class="Identifier">pat</span><span class="Other">:</span> <span class="Identifier">set</span><span class="Other">[</span><span class="Identifier">char</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">offset</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">;</span> <span class="Identifier">len</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+<a id="peekMatch,MarggersParser,set[char],int"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#peekMatch%2CMarggersParser%2Cset%5Bchar%5D%2Cint"><span class="Identifier">peekMatch</span></a><span class="Other">(</span><span class="Identifier">parser</span><span class="Other">:</span> <a href="shared.html#MarggersParser"><span class="Identifier">MarggersParser</span></a><span class="Other">;</span> <span class="Identifier">pat</span><span class="Other">:</span> <span class="Identifier">set</span><span class="Other">[</span><span class="Identifier">char</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">offset</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
     <span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
@@ -499,21 +520,21 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L199" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<a id="peekMatch,MarggersParser,string,int"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#peekMatch%2CMarggersParser%2Cstring%2Cint"><span class="Identifier">peekMatch</span></a><span class="Other">(</span><span class="Identifier">parser</span><span class="Other">:</span> <a href="shared.html#MarggersParser"><span class="Identifier">MarggersParser</span></a><span class="Other">;</span> <span class="Identifier">pat</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">;</span> <span class="Identifier">offset</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+<a id="peekMatch,MarggersParser,char,int,Natural"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#peekMatch%2CMarggersParser%2Cchar%2Cint%2CNatural"><span class="Identifier">peekMatch</span></a><span class="Other">(</span><span class="Identifier">parser</span><span class="Other">:</span> <a href="shared.html#MarggersParser"><span class="Identifier">MarggersParser</span></a><span class="Other">;</span> <span class="Identifier">pat</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">;</span> <span class="Identifier">offset</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">;</span> <span class="Identifier">len</span><span class="Other">:</span> <span class="Identifier">Natural</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
     <span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L208"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L202"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L208" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L202" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<a id="nextMatch,MarggersParserVar,char,int"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#nextMatch%2CMarggersParserVar%2Cchar%2Cint"><span class="Identifier">nextMatch</span></a><span class="Other">(</span><span class="Identifier">parser</span><span class="Other">:</span> <a href="shared.html#MarggersParserVar"><span class="Identifier">MarggersParserVar</span></a><span class="Other">;</span> <span class="Identifier">pat</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">;</span> <span class="Identifier">offset</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<a id="peekMatch,MarggersParser,set[char],int,Natural"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#peekMatch%2CMarggersParser%2Cset%5Bchar%5D%2Cint%2CNatural"><span class="Identifier">peekMatch</span></a><span class="Other">(</span><span class="Identifier">parser</span><span class="Other">:</span> <a href="shared.html#MarggersParser"><span class="Identifier">MarggersParser</span></a><span class="Other">;</span> <span class="Identifier">pat</span><span class="Other">:</span> <span class="Identifier">set</span><span class="Other">[</span><span class="Identifier">char</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">offset</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">;</span>
+               <span class="Identifier">len</span><span class="Other">:</span> <span class="Identifier">Natural</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 
@@ -523,33 +544,21 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L211" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<a id="nextMatch,MarggersParserVar,set[char],int"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#nextMatch%2CMarggersParserVar%2Cset%5Bchar%5D%2Cint"><span class="Identifier">nextMatch</span></a><span class="Other">(</span><span class="Identifier">parser</span><span class="Other">:</span> <a href="shared.html#MarggersParserVar"><span class="Identifier">MarggersParserVar</span></a><span class="Other">;</span> <span class="Identifier">pat</span><span class="Other">:</span> <span class="Identifier">set</span><span class="Other">[</span><span class="Identifier">char</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">offset</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<a id="peekMatch,MarggersParser,string,int"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#peekMatch%2CMarggersParser%2Cstring%2Cint"><span class="Identifier">peekMatch</span></a><span class="Other">(</span><span class="Identifier">parser</span><span class="Other">:</span> <a href="shared.html#MarggersParser"><span class="Identifier">MarggersParser</span></a><span class="Other">;</span> <span class="Identifier">pat</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">;</span> <span class="Identifier">offset</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L215"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L220"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L215" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L220" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<a id="nextMatch,MarggersParserVar,char,int,int"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#nextMatch%2CMarggersParserVar%2Cchar%2Cint%2Cint"><span class="Identifier">nextMatch</span></a><span class="Other">(</span><span class="Identifier">parser</span><span class="Other">:</span> <a href="shared.html#MarggersParserVar"><span class="Identifier">MarggersParserVar</span></a><span class="Other">;</span> <span class="Identifier">pat</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">;</span> <span class="Identifier">offset</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">;</span> <span class="Identifier">len</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
-<dd>
-
-
-&nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L219"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L219" class="link-seesrc" target="_blank" >Edit</a>
-
-</dd>
-<a id="nextMatch,MarggersParserVar,set[char],int,int"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#nextMatch%2CMarggersParserVar%2Cset%5Bchar%5D%2Cint%2Cint"><span class="Identifier">nextMatch</span></a><span class="Other">(</span><span class="Identifier">parser</span><span class="Other">:</span> <a href="shared.html#MarggersParserVar"><span class="Identifier">MarggersParserVar</span></a><span class="Other">;</span> <span class="Identifier">pat</span><span class="Other">:</span> <span class="Identifier">set</span><span class="Other">[</span><span class="Identifier">char</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">offset</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">;</span>
-               <span class="Identifier">len</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<a id="peekPrevMatch,MarggersParser,,int"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#peekPrevMatch%2CMarggersParser%2C%2Cint"><span class="Identifier">peekPrevMatch</span></a><span class="Other">(</span><span class="Identifier">parser</span><span class="Other">:</span> <a href="shared.html#MarggersParser"><span class="Identifier">MarggersParser</span></a><span class="Other">;</span> <span class="Identifier">pat</span><span class="Other">:</span> <span class="Identifier">char</span> <span class="Operator">|</span> <span class="Identifier">set</span><span class="Other">[</span><span class="Identifier">char</span><span class="Other">]</span><span class="Other">;</span>
+                   <span class="Identifier">offset</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 
@@ -559,6 +568,66 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L223" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
+<a id="peekPrevMatch,MarggersParser,string,int"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#peekPrevMatch%2CMarggersParser%2Cstring%2Cint"><span class="Identifier">peekPrevMatch</span></a><span class="Other">(</span><span class="Identifier">parser</span><span class="Other">:</span> <a href="shared.html#MarggersParser"><span class="Identifier">MarggersParser</span></a><span class="Other">;</span> <span class="Identifier">pat</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">;</span> <span class="Identifier">offset</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L226"
+class="link-seesrc" target="_blank">Source</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L226" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+<a id="nextMatch,MarggersParserVar,char,int"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#nextMatch%2CMarggersParserVar%2Cchar%2Cint"><span class="Identifier">nextMatch</span></a><span class="Other">(</span><span class="Identifier">parser</span><span class="Other">:</span> <a href="shared.html#MarggersParserVar"><span class="Identifier">MarggersParserVar</span></a><span class="Other">;</span> <span class="Identifier">pat</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">;</span> <span class="Identifier">offset</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L229"
+class="link-seesrc" target="_blank">Source</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L229" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+<a id="nextMatch,MarggersParserVar,set[char],int"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#nextMatch%2CMarggersParserVar%2Cset%5Bchar%5D%2Cint"><span class="Identifier">nextMatch</span></a><span class="Other">(</span><span class="Identifier">parser</span><span class="Other">:</span> <a href="shared.html#MarggersParserVar"><span class="Identifier">MarggersParserVar</span></a><span class="Other">;</span> <span class="Identifier">pat</span><span class="Other">:</span> <span class="Identifier">set</span><span class="Other">[</span><span class="Identifier">char</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">offset</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L233"
+class="link-seesrc" target="_blank">Source</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L233" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+<a id="nextMatch,MarggersParserVar,char,int,int"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#nextMatch%2CMarggersParserVar%2Cchar%2Cint%2Cint"><span class="Identifier">nextMatch</span></a><span class="Other">(</span><span class="Identifier">parser</span><span class="Other">:</span> <a href="shared.html#MarggersParserVar"><span class="Identifier">MarggersParserVar</span></a><span class="Other">;</span> <span class="Identifier">pat</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">;</span> <span class="Identifier">offset</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">;</span> <span class="Identifier">len</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L237"
+class="link-seesrc" target="_blank">Source</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L237" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+<a id="nextMatch,MarggersParserVar,set[char],int,int"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#nextMatch%2CMarggersParserVar%2Cset%5Bchar%5D%2Cint%2Cint"><span class="Identifier">nextMatch</span></a><span class="Other">(</span><span class="Identifier">parser</span><span class="Other">:</span> <a href="shared.html#MarggersParserVar"><span class="Identifier">MarggersParserVar</span></a><span class="Other">;</span> <span class="Identifier">pat</span><span class="Other">:</span> <span class="Identifier">set</span><span class="Other">[</span><span class="Identifier">char</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">offset</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">;</span>
+               <span class="Identifier">len</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L241"
+class="link-seesrc" target="_blank">Source</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L241" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
 <a id="nextMatch,MarggersParserVar,string,int"></a>
 <dt><pre><span class="Keyword">func</span> <a href="#nextMatch%2CMarggersParserVar%2Cstring%2Cint"><span class="Identifier">nextMatch</span></a><span class="Other">(</span><span class="Identifier">parser</span><span class="Other">:</span> <a href="shared.html#MarggersParserVar"><span class="Identifier">MarggersParserVar</span></a><span class="Other">;</span> <span class="Identifier">pat</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">;</span> <span class="Identifier">offset</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
@@ -566,9 +635,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L227"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L245"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L227" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L245" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 
@@ -598,9 +667,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L231"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L249"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L231" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L249" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="match.m,MarggersParserVarMatcher"></a>
@@ -609,9 +678,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L251"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L269"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L251" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L269" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 
@@ -751,15 +820,37 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L176" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
+<a id="noNext.t,MarggersParser,int"></a>
+<dt><pre><span class="Keyword">template</span> <a href="#noNext.t%2CMarggersParser%2Cint"><span class="Identifier">noNext</span></a><span class="Other">(</span><span class="Identifier">parser</span><span class="Other">:</span> <a href="shared.html#MarggersParser"><span class="Identifier">MarggersParser</span></a><span class="Other">;</span> <span class="Identifier">offset</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span></pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L190"
+class="link-seesrc" target="_blank">Source</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L190" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+<a id="noPrev.t,MarggersParser,int"></a>
+<dt><pre><span class="Keyword">template</span> <a href="#noPrev.t%2CMarggersParser%2Cint"><span class="Identifier">noPrev</span></a><span class="Other">(</span><span class="Identifier">parser</span><span class="Other">:</span> <a href="shared.html#MarggersParser"><span class="Identifier">MarggersParser</span></a><span class="Other">;</span> <span class="Identifier">offset</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span></pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L193"
+class="link-seesrc" target="_blank">Source</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L193" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
 <a id="nextMatch.t,MarggersParserVar"></a>
 <dt><pre><span class="Keyword">template</span> <a href="#nextMatch.t%2CMarggersParserVar"><span class="Identifier">nextMatch</span></a><span class="Other">(</span><span class="Identifier">parser</span><span class="Other">:</span> <a href="shared.html#MarggersParserVar"><span class="Identifier">MarggersParserVar</span></a><span class="Other">)</span><span class="Other">:</span> <a href="shared.html#MarggersParserVarMatcher"><span class="Identifier">MarggersParserVarMatcher</span></a></pre></dt>
 <dd>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L248"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L266"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L248" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L266" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="case.t,MarggersParserVarMatcher"></a>
@@ -768,9 +859,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L257"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L275"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L257" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L275" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 
@@ -783,7 +874,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-02-11 10:39:35 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-02-11 12:17:37 UTC</small>
       </div>
     </div>
   </div>
