@@ -180,6 +180,11 @@ function main() {
     title="contains[I](arr: static array[I, string]; x: string): bool">contains,<wbr>staticarray[I,<wbr>string],<wbr>string</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">surroundedWhitespace
+      <li><a class="reference" href="#surroundedWhitespace%2CMarggersParser%2Cint"
+    title="surroundedWhitespace(parser: MarggersParser; offset: int = 0): bool">surroundedWhitespace,<wbr>MarggersParser,<wbr>int</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">$
       <li><a class="reference" href="#%24%2CMarggersElement"
     title="`$`(elem: MarggersElement): string">$,<wbr>MarggersElement</a></li>
@@ -193,6 +198,11 @@ function main() {
   <ul class="simple nested-toc-section">paragraphIfText
       <li><a class="reference" href="#paragraphIfText%2CMarggersElement"
     title="paragraphIfText(elem: MarggersElement): MarggersElement">paragraphIfText,<wbr>MarggersElement</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">noAdjacentWhitespace
+      <li><a class="reference" href="#noAdjacentWhitespace%2CMarggersParser%2Cint"
+    title="noAdjacentWhitespace(parser: MarggersParser; offset: int = 0): bool">noAdjacentWhitespace,<wbr>MarggersParser,<wbr>int</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">peekPrevMatch
@@ -235,9 +245,19 @@ function main() {
     title="peekMatch(parser: MarggersParser; pat: string; offset: int = 0): bool">peekMatch,<wbr>MarggersParser,<wbr>string,<wbr>int</a></li>
 
   </ul>
+  <ul class="simple nested-toc-section">onlyNextWhitespace
+      <li><a class="reference" href="#onlyNextWhitespace%2CMarggersParser%2Cint"
+    title="onlyNextWhitespace(parser: MarggersParser; offset: int = 0): bool">onlyNextWhitespace,<wbr>MarggersParser,<wbr>int</a></li>
+
+  </ul>
   <ul class="simple nested-toc-section">anyNext
       <li><a class="reference" href="#anyNext%2CMarggersParser%2Cint"
     title="anyNext(parser: MarggersParser; offset: int = 0): bool">anyNext,<wbr>MarggersParser,<wbr>int</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">prevWhitespace
+      <li><a class="reference" href="#prevWhitespace%2CMarggersParser%2Cint"
+    title="prevWhitespace(parser: MarggersParser; offset: int = 0): bool">prevWhitespace,<wbr>MarggersParser,<wbr>int</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">nextMatch
@@ -251,6 +271,16 @@ function main() {
     title="nextMatch(parser: MarggersParserVar; pat: set[char]; offset: int = 0; len: int): bool">nextMatch,<wbr>MarggersParserVar,<wbr>set[char],<wbr>int,<wbr>int</a></li>
   <li><a class="reference" href="#nextMatch%2CMarggersParserVar%2Cstring%2Cint"
     title="nextMatch(parser: MarggersParserVar; pat: string; offset: int = 0): bool">nextMatch,<wbr>MarggersParserVar,<wbr>string,<wbr>int</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">onlyPrevWhitespace
+      <li><a class="reference" href="#onlyPrevWhitespace%2CMarggersParser%2Cint"
+    title="onlyPrevWhitespace(parser: MarggersParser; offset: int = 0): bool">onlyPrevWhitespace,<wbr>MarggersParser,<wbr>int</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">nextWhitespace
+      <li><a class="reference" href="#nextWhitespace%2CMarggersParser%2Cint"
+    title="nextWhitespace(parser: MarggersParser; offset: int = 0): bool">nextWhitespace,<wbr>MarggersParser,<wbr>int</a></li>
 
   </ul>
 
@@ -331,9 +361,9 @@ function main() {
 
 Most convenient string type to use for each backend. <tt class="docutils literal"><span class="pre">cstring</span></tt> on JS.
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L26"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L28"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L26" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L28" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="KnownTags"></a>
@@ -344,9 +374,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Enum of tags used in this library.
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L51"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L53"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L51" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L53" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="MarggersElement"></a>
@@ -368,9 +398,9 @@ class="link-seesrc" target="_blank">Source</a>
 <p>HTML element contains tag, attributes, and sequence of nodes. </p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L61"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L63"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L61" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L63" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="MarggersParserObj"></a>
@@ -385,9 +415,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 A parser object.
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L77"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L79"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L77" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L79" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="MarggersParser"></a>
@@ -396,9 +426,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Reference version of MarggersParserObj. To change to non-ref, do <tt class="docutils literal"><span class="pre">-d:marggersParserUseObj</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L91"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L93"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L91" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L93" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="MarggersParserVar"></a>
@@ -407,9 +437,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L95"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L97"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L95" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L97" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="MarggersParserVarMatcher"></a>
@@ -418,9 +448,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L353"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L373"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L353" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L373" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 
@@ -434,9 +464,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L162"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L164"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L162" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L164" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 
@@ -451,9 +481,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L113"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L115"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L113" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L115" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="attr,MarggersElement,NativeString,NativeString"></a>
@@ -462,9 +492,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Adds attribute to element
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L117"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L119"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L117" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L119" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="hasAttr,MarggersElement,NativeString"></a>
@@ -474,9 +504,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Checks if element has attribute
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L121"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L123"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L121" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L123" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="delAttr,MarggersElement,NativeString"></a>
@@ -485,9 +515,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Deletes attribute of element
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L125"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L127"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L125" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L127" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="style,MarggersElement,NativeString"></a>
@@ -496,9 +526,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Adds style to element
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L129"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L131"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L129" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L131" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="setLink,MarggersElement,NativeString"></a>
@@ -509,9 +539,9 @@ class="link-seesrc" target="_blank">Source</a>
 <p>If <tt class="docutils literal"><span class="pre">elem</span></tt> has tag <tt class="docutils literal"><span class="pre">a</span></tt>, sets the <tt class="docutils literal"><span class="pre">href</span></tt> attribute to <tt class="docutils literal"><span class="pre">link</span></tt>. Otherwise if <tt class="docutils literal"><span class="pre">elem</span></tt> has tag <tt class="docutils literal"><span class="pre">img</span></tt> and link ends with .mp4, .m4v, .mov, .ogv or .webm, <tt class="docutils literal"><span class="pre">elem</span></tt> will become a video element, and if link ends with .mp3, .oga, .ogg, .wav or .flac, <tt class="docutils literal"><span class="pre">elem</span></tt> will become an audio element; then the <tt class="docutils literal"><span class="pre">src</span></tt> attribute will be set to <tt class="docutils literal"><span class="pre">link</span></tt>. Other tags for <tt class="docutils literal"><span class="pre">elem</span></tt> also set the <tt class="docutils literal"><span class="pre">src</span></tt> attribute to <tt class="docutils literal"><span class="pre">link</span></tt>.</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L133"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L135"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L133" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L135" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="toCstring,MarggersElement"></a>
@@ -520,9 +550,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Outputs a marggers element as HTML as a cstring, mostly for JS.
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L251"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L253"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L251" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L253" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 
@@ -536,9 +566,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 More efficient version of <tt class="docutils literal"><span class="pre">contains</span></tt> for static arrays of strings using <tt class="docutils literal"><span class="pre">case</span></tt>
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L43"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L45"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L43" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L45" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="newStr,NativeString"></a>
@@ -547,9 +577,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Creates a new text node with text <tt class="docutils literal"><span class="pre">s</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L97"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L99"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L97" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L99" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="newElem,KnownTags,seq[MarggersElement]"></a>
@@ -559,9 +589,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Creates a new element node with tag <tt class="docutils literal"><span class="pre">tag</span></tt> and content nodes <tt class="docutils literal"><span class="pre">content</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L101"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L103"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L101" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L103" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="paragraphIfText,MarggersElement"></a>
@@ -571,9 +601,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 If <tt class="docutils literal"><span class="pre">elem</span></tt> is a text node, turns it into a &lt;p&gt; element. Otherwise returns <tt class="docutils literal"><span class="pre">elem</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L105"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L107"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L105" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L107" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="isEmpty,KnownTags"></a>
@@ -582,9 +612,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Returns true if <tt class="docutils literal"><span class="pre">tag</span></tt> is an empty tag, i.e. it has no ending tag.
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L164"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L166"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L164" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L166" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="escapeHtmlChar,char"></a>
@@ -593,9 +623,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Escapes &amp;, &lt; and &gt; for html.
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L198"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L200"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L198" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L200" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="$,MarggersElement"></a>
@@ -604,9 +634,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Outputs a marggers element as HTML.
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L206"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L208"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L206" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L208" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="anyNext,MarggersParser,int"></a>
@@ -616,9 +646,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L269"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L271"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L269" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L271" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="anyPrev,MarggersParser,int"></a>
@@ -628,9 +658,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L272"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L274"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L272" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L274" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="peekMatch,MarggersParser,char,int"></a>
@@ -640,9 +670,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L281"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L283"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L281" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L283" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="peekMatch,MarggersParser,set[char],int"></a>
@@ -652,9 +682,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L284"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L286"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L284" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L286" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="peekMatch,MarggersParser,char,int,Natural"></a>
@@ -664,9 +694,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L287"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L289"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L287" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L289" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="peekMatch,MarggersParser,set[char],int,Natural"></a>
@@ -676,9 +706,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L296"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L298"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L296" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L298" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="peekMatch,MarggersParser,string,int"></a>
@@ -688,9 +718,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L305"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L307"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L305" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L307" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="peekPrevMatch,MarggersParser,,int"></a>
@@ -700,9 +730,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L308"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L310"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L308" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L310" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="peekPrevMatch,MarggersParser,string,int"></a>
@@ -712,38 +742,38 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L311"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L313"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L311" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L313" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<a id="nextMatch,MarggersParserVar,char,int"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#nextMatch%2CMarggersParserVar%2Cchar%2Cint"><span class="Identifier">nextMatch</span></a><span class="Other">(</span><span class="Identifier">parser</span><span class="Other">:</span> <a href="shared.html#MarggersParserVar"><span class="Identifier">MarggersParserVar</span></a><span class="Other">;</span> <span class="Identifier">pat</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">;</span> <span class="Identifier">offset</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+<a id="prevWhitespace,MarggersParser,int"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#prevWhitespace%2CMarggersParser%2Cint"><span class="Identifier">prevWhitespace</span></a><span class="Other">(</span><span class="Identifier">parser</span><span class="Other">:</span> <a href="shared.html#MarggersParser"><span class="Identifier">MarggersParser</span></a><span class="Other">;</span> <span class="Identifier">offset</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span>
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L314"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L316"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L314" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L316" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<a id="nextMatch,MarggersParserVar,set[char],int"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#nextMatch%2CMarggersParserVar%2Cset%5Bchar%5D%2Cint"><span class="Identifier">nextMatch</span></a><span class="Other">(</span><span class="Identifier">parser</span><span class="Other">:</span> <a href="shared.html#MarggersParserVar"><span class="Identifier">MarggersParserVar</span></a><span class="Other">;</span> <span class="Identifier">pat</span><span class="Other">:</span> <span class="Identifier">set</span><span class="Other">[</span><span class="Identifier">char</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">offset</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+<a id="nextWhitespace,MarggersParser,int"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#nextWhitespace%2CMarggersParser%2Cint"><span class="Identifier">nextWhitespace</span></a><span class="Other">(</span><span class="Identifier">parser</span><span class="Other">:</span> <a href="shared.html#MarggersParser"><span class="Identifier">MarggersParser</span></a><span class="Other">;</span> <span class="Identifier">offset</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span>
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L318"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L319"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L318" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L319" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
-<a id="nextMatch,MarggersParserVar,char,int,int"></a>
-<dt><pre><span class="Keyword">func</span> <a href="#nextMatch%2CMarggersParserVar%2Cchar%2Cint%2Cint"><span class="Identifier">nextMatch</span></a><span class="Other">(</span><span class="Identifier">parser</span><span class="Other">:</span> <a href="shared.html#MarggersParserVar"><span class="Identifier">MarggersParserVar</span></a><span class="Other">;</span> <span class="Identifier">pat</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">;</span> <span class="Identifier">offset</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">;</span> <span class="Identifier">len</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
-    <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<a id="surroundedWhitespace,MarggersParser,int"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#surroundedWhitespace%2CMarggersParser%2Cint"><span class="Identifier">surroundedWhitespace</span></a><span class="Other">(</span><span class="Identifier">parser</span><span class="Other">:</span> <a href="shared.html#MarggersParser"><span class="Identifier">MarggersParser</span></a><span class="Other">;</span> <span class="Identifier">offset</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 
@@ -753,6 +783,78 @@ class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L322" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
+<a id="onlyPrevWhitespace,MarggersParser,int"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#onlyPrevWhitespace%2CMarggersParser%2Cint"><span class="Identifier">onlyPrevWhitespace</span></a><span class="Other">(</span><span class="Identifier">parser</span><span class="Other">:</span> <a href="shared.html#MarggersParser"><span class="Identifier">MarggersParser</span></a><span class="Other">;</span> <span class="Identifier">offset</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span>
+    <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L325"
+class="link-seesrc" target="_blank">Source</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L325" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+<a id="onlyNextWhitespace,MarggersParser,int"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#onlyNextWhitespace%2CMarggersParser%2Cint"><span class="Identifier">onlyNextWhitespace</span></a><span class="Other">(</span><span class="Identifier">parser</span><span class="Other">:</span> <a href="shared.html#MarggersParser"><span class="Identifier">MarggersParser</span></a><span class="Other">;</span> <span class="Identifier">offset</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span>
+    <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L328"
+class="link-seesrc" target="_blank">Source</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L328" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+<a id="noAdjacentWhitespace,MarggersParser,int"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#noAdjacentWhitespace%2CMarggersParser%2Cint"><span class="Identifier">noAdjacentWhitespace</span></a><span class="Other">(</span><span class="Identifier">parser</span><span class="Other">:</span> <a href="shared.html#MarggersParser"><span class="Identifier">MarggersParser</span></a><span class="Other">;</span> <span class="Identifier">offset</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L331"
+class="link-seesrc" target="_blank">Source</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L331" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+<a id="nextMatch,MarggersParserVar,char,int"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#nextMatch%2CMarggersParserVar%2Cchar%2Cint"><span class="Identifier">nextMatch</span></a><span class="Other">(</span><span class="Identifier">parser</span><span class="Other">:</span> <a href="shared.html#MarggersParserVar"><span class="Identifier">MarggersParserVar</span></a><span class="Other">;</span> <span class="Identifier">pat</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">;</span> <span class="Identifier">offset</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L334"
+class="link-seesrc" target="_blank">Source</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L334" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+<a id="nextMatch,MarggersParserVar,set[char],int"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#nextMatch%2CMarggersParserVar%2Cset%5Bchar%5D%2Cint"><span class="Identifier">nextMatch</span></a><span class="Other">(</span><span class="Identifier">parser</span><span class="Other">:</span> <a href="shared.html#MarggersParserVar"><span class="Identifier">MarggersParserVar</span></a><span class="Other">;</span> <span class="Identifier">pat</span><span class="Other">:</span> <span class="Identifier">set</span><span class="Other">[</span><span class="Identifier">char</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">offset</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L338"
+class="link-seesrc" target="_blank">Source</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L338" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+<a id="nextMatch,MarggersParserVar,char,int,int"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#nextMatch%2CMarggersParserVar%2Cchar%2Cint%2Cint"><span class="Identifier">nextMatch</span></a><span class="Other">(</span><span class="Identifier">parser</span><span class="Other">:</span> <a href="shared.html#MarggersParserVar"><span class="Identifier">MarggersParserVar</span></a><span class="Other">;</span> <span class="Identifier">pat</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">;</span> <span class="Identifier">offset</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">;</span> <span class="Identifier">len</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma">
+    <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L342"
+class="link-seesrc" target="_blank">Source</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L342" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
 <a id="nextMatch,MarggersParserVar,set[char],int,int"></a>
 <dt><pre><span class="Keyword">func</span> <a href="#nextMatch%2CMarggersParserVar%2Cset%5Bchar%5D%2Cint%2Cint"><span class="Identifier">nextMatch</span></a><span class="Other">(</span><span class="Identifier">parser</span><span class="Other">:</span> <a href="shared.html#MarggersParserVar"><span class="Identifier">MarggersParserVar</span></a><span class="Other">;</span> <span class="Identifier">pat</span><span class="Other">:</span> <span class="Identifier">set</span><span class="Other">[</span><span class="Identifier">char</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">offset</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">;</span>
                <span class="Identifier">len</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
@@ -760,9 +862,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L326"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L346"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L326" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L346" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="nextMatch,MarggersParserVar,string,int"></a>
@@ -772,9 +874,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L330"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L350"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L330" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L350" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 
@@ -788,9 +890,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L264"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L266"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L264" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L266" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 
@@ -804,9 +906,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L334"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L354"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L334" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L354" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="match.m,MarggersParserVarMatcher"></a>
@@ -815,9 +917,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L358"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L378"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L358" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L378" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 
@@ -831,9 +933,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L30"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L32"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L30" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L32" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="toNativeString.t"></a>
@@ -842,9 +944,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L32"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L34"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L32" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L34" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="moveCompat.t,untyped"></a>
@@ -853,9 +955,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Compatibility replacement for <tt class="docutils literal"><span class="pre">move</span></tt>
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L34"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L36"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L34" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L36" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="[].t,MarggersElement,int"></a>
@@ -864,9 +966,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Indexes <tt class="docutils literal"><span class="pre">elem.content</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L170"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L172"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L170" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L172" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="[].t,MarggersElement,BackwardsIndex"></a>
@@ -875,9 +977,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Indexes <tt class="docutils literal"><span class="pre">elem.content</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L174"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L176"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L174" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L176" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="[]=.t,MarggersElement,int,MarggersElement"></a>
@@ -886,9 +988,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Indexes <tt class="docutils literal"><span class="pre">elem.content</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L178"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L180"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L178" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L180" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="[]=.t,MarggersElement,BackwardsIndex,MarggersElement"></a>
@@ -897,9 +999,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Indexes <tt class="docutils literal"><span class="pre">elem.content</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L182"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L184"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L182" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L184" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="add.t,MarggersElement,MarggersElement"></a>
@@ -908,9 +1010,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Adds to <tt class="docutils literal"><span class="pre">elem.content</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L186"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L188"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L186" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L188" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="add.t,MarggersElement,seq[MarggersElement]"></a>
@@ -919,9 +1021,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Appends nodes to <tt class="docutils literal"><span class="pre">elem.content</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L190"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L192"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L190" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L192" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="add.t,MarggersElement,NativeString"></a>
@@ -930,9 +1032,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Adds a text node to <tt class="docutils literal"><span class="pre">elem.content</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L194"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L196"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L194" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L196" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="toNativeString.t,MarggersElement"></a>
@@ -941,9 +1043,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L255"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L257"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L255" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L257" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="get.t,MarggersParser,int"></a>
@@ -952,9 +1054,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L258"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L260"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L258" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L260" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="get.t,MarggersParser,int,int"></a>
@@ -963,9 +1065,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L261"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L263"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L261" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L263" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="noNext.t,MarggersParser,int"></a>
@@ -974,9 +1076,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L275"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L277"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L275" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L277" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="noPrev.t,MarggersParser,int"></a>
@@ -985,9 +1087,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L278"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L280"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L278" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L280" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="nextMatch.t,MarggersParserVar"></a>
@@ -996,9 +1098,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L355"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L375"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L355" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L375" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="case.t,MarggersParserVarMatcher"></a>
@@ -1007,9 +1109,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L364"
+href="https://github.com/hlaaftana/marggers/tree/master/src/marggers/shared.nim#L384"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L364" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/hlaaftana/marggers/edit/master/src/marggers/shared.nim#L384" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 
@@ -1022,7 +1124,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2021-02-12 16:15:49 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-02-13 14:26:25 UTC</small>
       </div>
     </div>
   </div>
